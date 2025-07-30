@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mini Game</title>
+  <link rel="stylesheet" href="style3.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Education</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signin.html">Form</a>
+          </li>
+          <li class="nav-item">
+            <span id="userNameDisplay" class="nav-link" onclick="promptLogin()">Login</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Welcome message -->
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <h1 id="welcomeMessage">Good luck!</h1>
+      </div>
+    </div>
+  </div>
+
+  <!-- Guess the Number game -->
+  <div class="game-wrapper">
+    <h1 class="game-title">Guess the Number</h1>
+    <p class="game-desc">Pick a number between 1 and 100</p>
+
+    <input
+      type="number"
+      class="game-input"
+      id="guessField"
+      placeholder="Your guess"
+      min="1"
+      max="100"
+    />
+
+    <div class="game-buttons">
+      <button onclick="checkGuess()">Guess</button>
+      <button onclick="resetGame()">Reset</button>
+    </div>
+
+    <p id="message" class="game-message"></p>
+    <p id="previousGuesses" class="game-history">Previous guesses: </p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
